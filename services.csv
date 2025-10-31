@@ -1,0 +1,3 @@
+cluster;service;desiredCount;taskDefinition;CPU;Memory;scaling_min;scaling_max
+arn:aws:ecs:us-east-1:235351028875:cluster/cluster-ecs;first-task-definition-service-7hu97y3z;1;arn:aws:ecs:us-east-1:235351028875:task-definition/first-task-definition:1;0;;235351028875.dkr.ecr.us-east-1.amazonaws.com/repo-ecr@sha256:a1e11bd97813f3b1da7b63534065fd552ee828d243a30601b7d00726f30685ea
+arn:aws:ecs:us-east-1:235351028875:cluster/cluster-ecs;first-task-definition-service-w9u3o1mq;1;arn:aws:ecs:us-east-1:235351028875:task-definition/first-task-definition:1;0;;235351028875.dkr.ecr.us-east-1.amazonaws.com/repo-ecr@sha256:a1e11bd97813f3b1da7b63534065fd552ee828d243a30601b7d00726f30685ea

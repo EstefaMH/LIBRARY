@@ -1,0 +1,6 @@
+.venv
+.history
+./history
+
+.env
+./src/library/utils.py
