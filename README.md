@@ -40,7 +40,7 @@ requeriments.txt
 Ejecutar el proyecto desde la carpeta `src`:
 ```sh
 cd src
-python lambda_handler.py
+python test\test.py\test_connection.py
 ```
 
 ## Docker
