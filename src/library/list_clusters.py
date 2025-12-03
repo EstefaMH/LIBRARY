@@ -3,8 +3,7 @@ import sys
 def list_ecs_clusters(ecs_client):
 
     try:
-        
-        print(f"Listar clusters de ECS\n")  
+        print("Listar clusters de ECS\n")  
         clusters = ecs_client.list_clusters()
         print("Clusters:", clusters)
         
@@ -12,7 +11,7 @@ def list_ecs_clusters(ecs_client):
         print("clusterArns:", cluster_arns)
         if not cluster_arns:
             print("No se encontraron clusters de ECS.")
-            return
+            return [] 
 
         print(f"Se encontraron {len(cluster_arns)} clusters. Detalle:")
         for i in range(0, len(cluster_arns), 1):

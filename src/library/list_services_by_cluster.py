@@ -7,22 +7,22 @@ def list_services_by_cluster(ecs_client, list_clusters):
         list_clusters (dict): Diccionario con los ARNs de los clusters.
 
     Returns:
-        list: Lista de ARNs de servicios encontrados, o False si ocurre un error.
+        list: Lista de ARNs de servicios encontrados.
 
     Raises:
+        NoServicesFoundError: Si no se encuentran servicios en el cluster.
         Exception: Si ocurre un error al listar los servicios.
-
-    Ejemplo:
-        services = list_services_by_cluster(ecs_client, clusters)
     """
     if list_clusters and 'clusterArns' in list_clusters:
         for cluster_arn in list_clusters['clusterArns']:
             try:
                 print(f"\nListando servicios para el cluster: {cluster_arn}...\n")
+                
 
                 services = []
                 next_token = None
-
+                
+                
                 while True:
                     if next_token:
                         response = ecs_client.list_services(
@@ -40,13 +40,9 @@ def list_services_by_cluster(ecs_client, list_clusters):
                     if not next_token:
                         break
 
-                if not services:
-                    print(f"No se encontraron servicios en el cluster {cluster_arn}.")
-                    continue
-                
                 return services
 
-               
+
             except Exception as e:
                 print(f"Error al listar los servicios del cluster {cluster_arn}: {e}")
                 raise Exception(f"Error al listar los servicios del cluster {cluster_arn}: {e}")

@@ -1,5 +1,5 @@
 def save_info_CSV(data, filename):
-    headers = ["clusterss", "service", "desiredCount", "taskDefinition", "CPU", "Memory", "scaling_min", "scaling_max"]
+    headers = ["clusters", "service", "desiredCount", "taskDefinition", "CPU", "Memory", "scaling_min", "scaling_max"]
     import csv
     try:
         with open(filename, mode='w', newline='') as file:

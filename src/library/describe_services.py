@@ -55,7 +55,7 @@ def describe_services(ecs_client, list_clusters, list_services):
                 
                 
                 
-        print("inforamcion",info_services)
+        print("informacion",info_services)
         print("longitud",len(info_services))
         print("-" * 60)
         

@@ -17,7 +17,6 @@ def conn_ecs(region):
             ecs_client = conn_ecs("us-east-1")
     """
     try:
-        print(f"Conectando cliente ECS ")
         return boto3.client('ecs',region_name= region)
     except Exception as e:
         raise Exception(f"Error al conectar con ECS: {e}")

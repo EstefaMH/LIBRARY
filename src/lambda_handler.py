@@ -4,7 +4,6 @@ from library.list_services_by_cluster import list_services_by_cluster
 from library.save_info_CSV import save_info_CSV
 from library.describe_services import describe_services
 
-#REGION = "us-east-1"
 
 def lambda_handler(event, context=None):
     REGION = event.get("region", "us-east-1")
